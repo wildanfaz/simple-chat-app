@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/spf13/cobra"
-	"github.com/wildanfaz/go-template/internal/routers"
+	"github.com/wildanfaz/simple-chat-app/internal/routers"
 )
 
 func InitCmd(ctx context.Context) {
@@ -23,6 +23,6 @@ var startEchoApp = &cobra.Command{
 	Use:   "start",
 	Short: "Start the application",
 	Run: func(cmd *cobra.Command, args []string) {
-		routers.InitEchoRouter()
+		routers.InitFiber()
 	},
 }
